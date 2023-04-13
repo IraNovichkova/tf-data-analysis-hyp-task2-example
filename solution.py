@@ -9,7 +9,7 @@ def solution(x: np.array, y: np.array) -> bool:
     x = x.ravel()
     y = y.ravel()
     p = 0.06
-    if (stats.ks_2samp(x, y).pvalue > p):
+    if (stats.anderson_ksamp([x, y]) > p:
         return False
     else:
         return True
